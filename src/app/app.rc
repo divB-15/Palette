@@ -1,0 +1,37 @@
+#pragma code_page(65001)
+#include <windows.h>
+#include "resource.h"
+
+// 应用图标：取色器卡片的微缩版 —— 饱和度/明度方块 + 色相条 + 取色点。
+// 图标文件由 tools\make_icon.py 生成（唯一构建输入）。
+// 只挂一个 ID：.ico 里自带 16~256 共 10 个尺寸，LoadIcon 按需挑。
+IDI_APP_ICON ICON "palette.ico"
+
+// 版本信息。文件属性 /「关于」里显示的就是这一份。
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+ FILEFLAGS 0x0L
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_APP
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName",      "Palette"
+            VALUE "FileDescription",  "Palette 配色工作台"
+            VALUE "FileVersion",      "1.0.0.0"
+            VALUE "InternalName",     "Palette"
+            VALUE "OriginalFilename", "Palette.exe"
+            VALUE "ProductName",      "Palette 配色工作台"
+            VALUE "ProductVersion",   "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
